@@ -6,6 +6,7 @@ import Projects from "./views/Projects.vue";
 import Buttons from "./views/Buttons.vue";
 import Breakpoints from "./views/Breakpoints.vue";
 import Playground from "./views/Playground.vue";
+import Grid from "./views/Grid.vue";
 
 Vue.use(Router);
 
@@ -17,6 +18,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Dashboard
+    },
+    {
+      path: "/grid",
+      name: "grid",
+      component: Grid
     },
     {
       path: "/playground",

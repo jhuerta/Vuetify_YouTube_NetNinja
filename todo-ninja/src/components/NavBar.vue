@@ -1,10 +1,10 @@
 <template>
   <nav>
     <v-toolbar flat class="primary">
-      <v-toolbar-side-icon @click="toggleDrawer"> </v-toolbar-side-icon>
+      <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
       <v-toolbar-title class="grey--text text--lighten-2">
         <v-icon left color="grey">book</v-icon>
-        <span class="font-weight-light ">ToDo</span>
+        <span class="font-weight-light">ToDo</span>
         <span class="text-uppercase">Ninja</span>
       </v-toolbar-title>
 
@@ -22,19 +22,12 @@
       </v-btn>
 
       <v-list vfor>
-        <v-list-tile
-          v-for="link in links"
-          :key="link.id"
-          router
-          :to="link.route"
-        >
+        <v-list-tile v-for="link in links" :key="link.id" router :to="link.route">
           <v-list-tile-action>
             <v-icon class="white--text">{{ link.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title class="white--text">
-              {{ link.text }}
-            </v-list-tile-title>
+            <v-list-tile-title class="white--text">{{ link.text }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -54,7 +47,8 @@ export default {
         { id: 3, icon: "theaters", text: "Breakpoints", route: "/breakpoints" },
         { id: 4, icon: "toll", text: "Buttons", route: "/buttons" },
         { id: 5, icon: "call_missed", text: "Displays", route: "/displays" },
-        { id: 6, icon: "games", text: "Playground", route: "/playground" }
+        { id: 6, icon: "games", text: "Playground", route: "/playground" },
+        { id: 7, icon: "grid_on", text: "Grid", route: "/grid" }
       ]
     };
   },

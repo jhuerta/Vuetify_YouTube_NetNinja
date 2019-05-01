@@ -28,6 +28,4 @@
     <h1 class="display-4">H1 Diplay 4</h1>
     <h4 class="display-4">H4 Diplay 4</h4>
   </div>
-  
-  </div>
 </template>
