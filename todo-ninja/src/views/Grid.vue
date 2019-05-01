@@ -48,6 +48,7 @@
       <option value="justify-space-between">justify-space-between</option>
       <option value="justify-center">justify-center</option>
       <option value="justify-end">justify-end</option>
+      <option value="justify-start">justify-start</option>
       <option value="nothing">none</option>
     </select>
   </div>
