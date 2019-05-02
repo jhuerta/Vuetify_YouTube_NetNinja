@@ -1,5 +1,30 @@
 <template>
   <nav>
+    <v-navigation-drawer v-model="drawer" app class="primary lighten-1">
+      <v-btn fab flat small color="black" @click="toggleDrawer">
+        <v-icon>close</v-icon>
+      </v-btn>
+
+      <v-layout column align-center>
+        <v-flex mt5>
+          <v-avatar size="100">
+            <img src="https://api.adorable.io/avatars/100/anything@adorable.png">
+          </v-avatar>
+          <p class="white--text subheading mt-2">The Net Ninja</p>
+        </v-flex>
+      </v-layout>
+      <v-list>
+        <v-list-tile v-for="link in links" :key="link.id" router :to="link.route">
+          <v-list-tile-action>
+            <v-icon class="white--text">{{ link.icon }}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title class="white--text">{{ link.text }}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-toolbar flat class="primary">
       <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
       <v-toolbar-title class="grey--text text--lighten-2">
@@ -15,23 +40,6 @@
         <v-icon right>exit_to_app</v-icon>
       </v-btn>
     </v-toolbar>
-
-    <v-navigation-drawer v-model="drawer" app class="primary lighten-1">
-      <v-btn fab flat small color="black" @click="toggleDrawer">
-        <v-icon>close</v-icon>
-      </v-btn>
-
-      <v-list vfor>
-        <v-list-tile v-for="link in links" :key="link.id" router :to="link.route">
-          <v-list-tile-action>
-            <v-icon class="white--text">{{ link.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title class="white--text">{{ link.text }}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
   </nav>
 </template>
 
