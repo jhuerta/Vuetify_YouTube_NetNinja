@@ -1,8 +1,8 @@
 <script>
-import Address_1 from "@/components/Address_1";
-import Address_2 from "@/components/Address_2";
-import Address_3 from "@/components/Address_3";
-import Address_4 from "@/components/Address_4";
+import Address_1 from "./Address_1";
+import Address_2 from "./Address_2";
+import Address_3 from "./Address_3";
+import Address_4 from "./Address_4";
 
 export default {
   components: {

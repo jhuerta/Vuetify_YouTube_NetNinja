@@ -1,16 +1,15 @@
 <template>
-  <div class="address1 text-xs-right">
+  <div class="address1">
     <v-card>
       <v-card-title primary-title>
         <div>
           <div class="font-weight-medium title text-uppercase">
-            Address 2
+            Address 1
           </div>
-          <div>{{ address.streetName }}</div>
-          <div>{{ address.number }}</div>
           <div class="font-weight-medium text-uppercase">
             {{ address.name }}
           </div>
+          <div>{{ address.streetName }}, {{ address.number }}</div>
         </div>
       </v-card-title>
     </v-card>
@@ -18,12 +17,8 @@
 </template>
 
 <script>
+import { address_base } from "./Address_Base.js";
 export default {
-  props: {
-    address: {
-      type: Object,
-      default: () => {}
-    }
-  }
+  mixins: [address_base]
 };
 </script>

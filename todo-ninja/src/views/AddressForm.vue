@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import AddresssingBuilder from "@/views/AddressingBuilder";
+import AddresssingBuilder from "@/components/AddressingFormat/AddressingBuilder";
 export default {
   components: {
     AddresssingBuilder
