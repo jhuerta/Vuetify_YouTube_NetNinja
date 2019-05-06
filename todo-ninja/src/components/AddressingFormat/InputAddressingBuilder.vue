@@ -1,8 +1,8 @@
 <script>
-import Address_1_In from "./Address_1_In";
-import Address_2_In from "./Address_2_In";
-import Address_3_In from "./Address_3_In";
-import Address_4_In from "./Address_4_In";
+import Address_1_In from "./templates/in/Address_1_In";
+import Address_2_In from "./templates/in/Address_2_In";
+import Address_3_In from "./templates/in/Address_3_In";
+import Address_4_In from "./templates/in/Address_4_In";
 
 export default {
   components: {
@@ -13,27 +13,25 @@ export default {
   },
   props: {
     addressFormatTypeId: {},
-    address: {
+    initAddress: {
       type: Object,
       default: () => {}
     }
   },
   methods: {
-    sometingHapped(p) {
-      console.log("--------------");
-      console.log(p);
-      console.log("--------------");
+    anyInputKeyUp(address) {
+      this.$emit("keyup", address);
     }
   },
   render: function(createElement) {
     const elementTemplateAddressType =
       "address" + this.addressFormatTypeId + "_in";
     return createElement(elementTemplateAddressType, {
-      props: {
-        address: this.address
-      },
       on: {
-        clicked: this.sometingHapped
+        anyInputKeyUp: this.anyInputKeyUp
+      },
+      props: {
+        initAddress: this.initAddress
       }
     });
   }

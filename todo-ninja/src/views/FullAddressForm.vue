@@ -13,7 +13,9 @@
     <InputAddressingBuilder
       class="ma-4"
       :addressFormatTypeId="addressTypeSelect.addressFormatTypeId"
-      @clicked="updateAddress"
+      :test="addressTypeSelect.addressFormatTypeId"
+      :initAddress="currentAddress"
+      @keyup="updateAddress"
     ></InputAddressingBuilder>
 
     <v-flex xs12 sm6 d-flex>
@@ -35,17 +37,21 @@ import InputAddressingBuilder from "@/components/AddressingFormat/InputAddressin
 export default {
   methods: {
     updateAddress(newAddress) {
-      console.log(newAddress);
-      this.sharedAddress = {
-        name: "new",
-        number: "new",
-        streetName: "new"
-      };
+      this.sharedAddress = newAddress;
     }
   },
   components: {
     OutputAddressingBuilder,
     InputAddressingBuilder
+  },
+  computed: {
+    currentAddress() {
+      return {
+        name: this.sharedAddress.name,
+        number: this.sharedAddress.number,
+        streetName: this.sharedAddress.streetName
+      };
+    }
   },
   data() {
     return {

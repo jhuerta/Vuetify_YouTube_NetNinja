@@ -8,18 +8,8 @@
 
       <v-card-text>
         <v-form class="px-3" ref="form">
-          <v-text-field
-            :rules="inputRules"
-            label="title"
-            v-model="title"
-            prepend-icon="folder"
-          ></v-text-field>
-          <v-text-field
-            :rules="inputRules"
-            label="person"
-            v-model="person"
-            prepend-icon="person"
-          ></v-text-field>
+          <v-text-field :rules="inputRules" label="title" v-model="title" prepend-icon="folder"></v-text-field>
+          <v-text-field :rules="inputRules" label="person" v-model="person" prepend-icon="person"></v-text-field>
           <v-textarea
             :rules="inputRules"
             label="information"
@@ -52,8 +42,7 @@
             ref="addProjectBtn"
             :loading="loadingStatus"
             @click="submit"
-            >Add Project</v-btn
-          >
+          >Add Project</v-btn>
         </v-form>
       </v-card-text>
     </v-card>

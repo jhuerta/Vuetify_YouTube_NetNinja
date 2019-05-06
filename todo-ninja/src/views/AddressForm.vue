@@ -4,32 +4,17 @@
       <v-flex xs12 sm3>
         <OutputAddressingBuilder
           class="ma-4"
-          :addressTypeId="addressTypeSelect.addressFormatTypeId"
+          :addressFormatTypeId="addressTypeSelect.addressFormatTypeId"
           :address="address"
         ></OutputAddressingBuilder>
       </v-flex>
     </v-layout>
 
-    <v-text-field
-      name="street"
-      label="Street Name"
-      v-model="streetName"
-      single-line
-    ></v-text-field>
+    <v-text-field name="street" label="Street Name" v-model="streetName" single-line></v-text-field>
 
-    <v-text-field
-      name="name"
-      label="Name"
-      v-model="name"
-      single-line
-    ></v-text-field>
+    <v-text-field name="name" label="Name" v-model="name" single-line></v-text-field>
 
-    <v-text-field
-      name="number"
-      label="Number"
-      v-model="number"
-      single-line
-    ></v-text-field>
+    <v-text-field name="number" label="Number" v-model="number" single-line></v-text-field>
 
     <v-flex xs12 sm6 d-flex>
       <v-select
