@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import { address_base } from "./Address_Base.js";
+import { address_base_out } from "./Address_Base_Out.js";
 export default {
-  mixins: [address_base]
+  mixins: [address_base_out]
 };
 </script>

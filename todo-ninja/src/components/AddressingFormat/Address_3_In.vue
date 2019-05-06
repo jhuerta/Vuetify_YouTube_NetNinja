@@ -4,11 +4,12 @@
       <v-card-title primary-title>
         <div>
           <div class="font-weight-medium title text-uppercase">
-            Address 4
+            Address 3
           </div>
-          <div>
-            {{ address.name }} {{ address.streetName }} {{ address.number }}
-          </div>
+          <span class="font-weight-medium text-uppercase">
+            {{ address.name }}
+          </span>
+          <div>{{ address.streetName }} {{ address.number }}</div>
         </div>
       </v-card-title>
     </v-card>
@@ -16,8 +17,8 @@
 </template>
 
 <script>
-import { address_base } from "./Address_Base.js";
+import { address_base_in } from "./Address_Base_In.js";
 export default {
-  mixins: [address_base]
+  mixins: [address_base_in]
 };
 </script>

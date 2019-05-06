@@ -8,6 +8,7 @@ import Breakpoints from "./views/Breakpoints.vue";
 import Playground from "./views/Playground.vue";
 import Grid from "./views/Grid.vue";
 import AddressForm from "./views/AddressForm";
+import FullAddressForm from "./views/FullAddressForm";
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
       path: "/grid",
       name: "grid",
       component: Grid
+    },
+    {
+      path: "/fulladdressform",
+      name: "fulladdressform",
+      component: FullAddressForm
     },
     {
       path: "/addressform",
