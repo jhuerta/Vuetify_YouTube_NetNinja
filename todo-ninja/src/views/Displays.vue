@@ -29,3 +29,10 @@
     <h4 class="display-4">H4 Diplay 4</h4>
   </div>
 </template>
+
+
+<script>
+  export default {
+    
+  }
+</script>
